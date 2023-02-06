@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\WebApiBookStore",
+    "\\WebApiBookStore\\BookOperations",
+    "\\WebApiBookStore\\BookOperations\\CreateBooks",
+    "\\WebApiBookStore\\BookOperations\\GetBookDetails"
+  ],
+  "SelectedNode": "\\WebApiBookStore\\BookOperations\\GetBookDetails\\GetBookDetailQuery.cs",
+  "PreviewInSolutionExplorer": false
+}

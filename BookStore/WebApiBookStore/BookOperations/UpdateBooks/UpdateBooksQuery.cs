@@ -1,0 +1,42 @@
+﻿using System.Linq;
+using System;
+using System.Reflection.Metadata;
+using WebApiBookStore.DbOperations;
+using static WebApiBookStore.BookOperations.CreateBooks.CreateBooksQuery;
+using WebApi;
+using Microsoft.EntityFrameworkCore;
+
+namespace WebApiBookStore.BookOperations.UpdateBooks
+{
+    public class UpdateBooksQuery
+    {
+        private readonly BookContext _bookContext;
+        public int BookId { get; set; }
+        public UpdateBookViewModel Model { get; set; }
+        public UpdateBooksQuery(BookContext bookContext)
+        {
+            _bookContext = bookContext;
+        }
+        public void Handle()
+        {
+            var book = _bookContext.Books.SingleOrDefault(x => x.Id == BookId);
+            if (book is null)
+            {
+                throw new InvalidOperationException("bu ıd ile bir kitap yok");
+            }
+            book.Title = Model.Title != default ? Model.Title : book.Title;
+            book.GenreId = Model.GenreId != default ? Model.GenreId : book.GenreId;
+
+            _bookContext.SaveChanges();
+            
+        }
+        public class UpdateBookViewModel
+        {
+            public string Title { get; set; }
+
+            public int GenreId { get; set; }
+        }
+    }
+}
+    
+
