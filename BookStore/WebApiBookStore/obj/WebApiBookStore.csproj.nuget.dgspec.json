@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Asus\\Desktop\\HÜSEYİN\\BookStore\\WebApiBookStore\\WebApiBookStore.csproj": {}
+    "C:\\Users\\Asus\\Desktop\\HÜSEYİN\\BookStore\\BookStore\\WebApiBookStore\\WebApiBookStore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Asus\\Desktop\\HÜSEYİN\\BookStore\\WebApiBookStore\\WebApiBookStore.csproj": {
+    "C:\\Users\\Asus\\Desktop\\HÜSEYİN\\BookStore\\BookStore\\WebApiBookStore\\WebApiBookStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\HÜSEYİN\\BookStore\\WebApiBookStore\\WebApiBookStore.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\HÜSEYİN\\BookStore\\BookStore\\WebApiBookStore\\WebApiBookStore.csproj",
         "projectName": "WebApiBookStore",
-        "projectPath": "C:\\Users\\Asus\\Desktop\\HÜSEYİN\\BookStore\\WebApiBookStore\\WebApiBookStore.csproj",
+        "projectPath": "C:\\Users\\Asus\\Desktop\\HÜSEYİN\\BookStore\\BookStore\\WebApiBookStore\\WebApiBookStore.csproj",
         "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Asus\\Desktop\\HÜSEYİN\\BookStore\\WebApiBookStore\\obj\\",
+        "outputPath": "C:\\Users\\Asus\\Desktop\\HÜSEYİN\\BookStore\\BookStore\\WebApiBookStore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -44,6 +44,18 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.4.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.6, )"
