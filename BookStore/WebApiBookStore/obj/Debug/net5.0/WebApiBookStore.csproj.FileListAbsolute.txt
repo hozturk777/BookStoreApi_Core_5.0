@@ -77,3 +77,4 @@ C:\Users\Asus\Desktop\HÜSEYİN\BookStore\BookStore\WebApiBookStore\obj\Debug\ne
 C:\Users\Asus\Desktop\HÜSEYİN\BookStore\BookStore\WebApiBookStore\obj\Debug\net5.0\WebApiBookStore.genruntimeconfig.cache
 C:\Users\Asus\Desktop\HÜSEYİN\BookStore\BookStore\WebApiBookStore\obj\Debug\net5.0\ref\WebApiBookStore.dll
 C:\Users\Asus\Desktop\HÜSEYİN\BookStore\BookStore\WebApiBookStore\bin\Debug\net5.0\FluentValidation.dll
+C:\Users\Asus\Desktop\HÜSEYİN\BookStore\BookStore\WebApiBookStore\bin\Debug\net5.0\Newtonsoft.Json.dll

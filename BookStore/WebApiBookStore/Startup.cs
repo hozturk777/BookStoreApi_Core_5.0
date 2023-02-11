@@ -14,6 +14,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using WebApiBookStore.DbOperations;
+using WebApiBookStore.Middlewares;
 
 namespace WebApiBookStore
 {
@@ -55,6 +56,8 @@ namespace WebApiBookStore
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCustomExceptionMiddle();
 
             app.UseEndpoints(endpoints =>
             {
