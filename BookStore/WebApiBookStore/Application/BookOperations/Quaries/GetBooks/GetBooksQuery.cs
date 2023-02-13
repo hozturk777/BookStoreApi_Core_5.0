@@ -2,11 +2,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using WebApi;
 using WebApiBookStore.Common;
 using WebApiBookStore.DbOperations;
+using WebApiBookStore.Entities;
 
-namespace WebApiBookStore.BookOperations.GetBooks
+namespace WebApiBookStore.Application.BookOperations.Quaries.GetBooks
 {
     public class GetBooksQuery
     {
@@ -20,7 +20,7 @@ namespace WebApiBookStore.BookOperations.GetBooks
         }
         public List<BookViewModel> Handle()
         {
-            var booklist = _bookContext.Books.OrderBy(x => x.Id).ToList<Book>();
+            var booklist = _bookContext.Books.OrderBy(x => x.Id).ToList();
             List<BookViewModel> bvm = _mapper.Map<List<BookViewModel>>(booklist);
             //List<BookViewModel> bvm = new List<BookViewModel>();
             //foreach (var book in booklist)
@@ -40,7 +40,7 @@ namespace WebApiBookStore.BookOperations.GetBooks
         {
             public string Title { get; set; }
             public int PageCount { get; set; }
-            public String PublishDate { get; set; }
+            public string PublishDate { get; set; }
             public string Genre { get; set; }
         }
     }

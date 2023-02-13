@@ -4,10 +4,10 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using WebApi;
 using WebApiBookStore.DbOperations;
+using WebApiBookStore.Entities;
 
-namespace WebApiBookStore.BookOperations.CreateBooks
+namespace WebApiBookStore.Application.BookOperations.Commands.CreateBooks
 {
     public class CreateBooksQuery
     {

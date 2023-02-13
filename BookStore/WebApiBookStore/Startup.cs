@@ -15,6 +15,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using WebApiBookStore.DbOperations;
 using WebApiBookStore.Middlewares;
+using WebApiBookStore.Services;
 
 namespace WebApiBookStore
 {
@@ -39,6 +40,7 @@ namespace WebApiBookStore
 
             services.AddDbContext<BookContext>(options => options.UseInMemoryDatabase(databaseName: "BookDB"));
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
+            services.AddSingleton<ILoggerService, ConsoleLogger>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

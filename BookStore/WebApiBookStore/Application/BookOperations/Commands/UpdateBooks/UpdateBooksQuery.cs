@@ -2,11 +2,11 @@
 using System;
 using System.Reflection.Metadata;
 using WebApiBookStore.DbOperations;
-using static WebApiBookStore.BookOperations.CreateBooks.CreateBooksQuery;
+using static WebApiBookStore.Application.BookOperations.Commands.CreateBooks.CreateBooksQuery;
 using WebApi;
 using Microsoft.EntityFrameworkCore;
 
-namespace WebApiBookStore.BookOperations.UpdateBooks
+namespace WebApiBookStore.Application.BookOperations.Commands.UpdateBooks
 {
     public class UpdateBooksQuery
     {
@@ -28,7 +28,7 @@ namespace WebApiBookStore.BookOperations.UpdateBooks
             book.GenreId = Model.GenreId != default ? Model.GenreId : book.GenreId;
 
             _bookContext.SaveChanges();
-            
+
         }
         public class UpdateBookViewModel
         {
@@ -38,5 +38,5 @@ namespace WebApiBookStore.BookOperations.UpdateBooks
         }
     }
 }
-    
+
 

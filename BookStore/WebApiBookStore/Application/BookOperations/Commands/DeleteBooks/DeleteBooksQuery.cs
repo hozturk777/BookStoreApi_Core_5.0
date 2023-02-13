@@ -3,7 +3,7 @@ using System;
 using WebApiBookStore.DbOperations;
 using Microsoft.EntityFrameworkCore;
 
-namespace WebApiBookStore.BookOperations.DeleteBooks
+namespace WebApiBookStore.Application.BookOperations.Commands.DeleteBooks
 {
     public class DeleteBooksQuery
     {

@@ -6,7 +6,7 @@ using WebApi;
 using WebApiBookStore.Common;
 using WebApiBookStore.DbOperations;
 
-namespace WebApiBookStore.BookOperations.GetBookDetails
+namespace WebApiBookStore.Application.BookOperations.Quaries.GetBookDetails
 {
     public class GetBookDetailQuery
     {
@@ -34,7 +34,7 @@ namespace WebApiBookStore.BookOperations.GetBookDetails
             //vm.Genre = ((GenreEnum)GetBook.GenreId).ToString();
             return vm;
         }
-          
+
     }
     public class BookDetailViewModel
     {

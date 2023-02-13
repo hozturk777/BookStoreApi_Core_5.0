@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using WebApi;
+using WebApiBookStore.Entities;
 
 namespace WebApiBookStore.DbOperations
 {
@@ -8,5 +8,6 @@ namespace WebApiBookStore.DbOperations
         public BookContext(DbContextOptions<BookContext> options) : base(options)
         { }
         public DbSet<Book> Books { get; set; }
+        public DbSet<Genre> Genres { get; set; }
     }
 }

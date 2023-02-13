@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Linq;
 using WebApi;
+using WebApiBookStore.Entities;
 
 namespace WebApiBookStore.DbOperations
 {
@@ -35,6 +36,21 @@ namespace WebApiBookStore.DbOperations
                         PublishDate = new DateTime(2006, 06, 20)
                     }
                  );
+                context.Genres.AddRange
+                    (
+                        new Genre
+                        {
+                            GenreName = "Personel Growth"
+                        },
+                        new Genre
+                        {
+                            GenreName = "Science Fiction"
+                        },
+                        new Genre
+                        {
+                            GenreName = "Romance"
+                        }
+                    );
                 context.SaveChanges();
             }
         }
