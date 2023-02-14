@@ -6,7 +6,7 @@ namespace WebApiBookStore.Application.BookOperations.Commands.DeleteBooks
     {
         public DeleteBooksValidator()
         {
-            RuleFor(commond => commond.BookId).NotNull().WithMessage("Böyle Bir ID YOK");
+            RuleFor(commond => commond.BookId).NotNull();
 
         }
     }

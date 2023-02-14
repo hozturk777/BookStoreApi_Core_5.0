@@ -12,7 +12,7 @@ namespace WebApiBookStore.Application.GenreOperations.Commands.CreateGenres
         private readonly BookContext _context;
         private readonly IMapper _mapper;
 
-        public CreateGenresCommand(CreateGenreModel model, BookContext context, IMapper mapper)
+        public CreateGenresCommand(BookContext context, IMapper mapper)
         {
             
             _context = context;
@@ -21,7 +21,7 @@ namespace WebApiBookStore.Application.GenreOperations.Commands.CreateGenres
 
         public void Handle()
         {
-            var createGenre = _context.Genres.SingleOrDefault(x => x.GenreName == Model.Name);
+            var createGenre = _context.Genres.SingleOrDefault(x => x.GenreName == Model.GenreName);
             if (createGenre is not null)
             {
                 throw new InvalidOperationException("Kategori zaten mevcut");
@@ -33,7 +33,7 @@ namespace WebApiBookStore.Application.GenreOperations.Commands.CreateGenres
 
         public class CreateGenreModel
         {
-            public string Name { get; set; }
+            public string GenreName { get; set; }
             
         }
     }

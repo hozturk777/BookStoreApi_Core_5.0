@@ -17,8 +17,53 @@ namespace WebApiBookStore.DbOperations
                 {
                     return;
                 }
+
+                context.Authors.AddRange
+                    (
+                    new Author
+                    {
+                        Name = "Hüseyin",
+                        SurName = "Öztürk",
+                        DateOfBirth = 2001
+                    },
+                    new Author
+                    {
+                        Name = "Hasan",
+                        SurName = "Seyrek",
+                        DateOfBirth = 2001,
+                    },
+                    new Author
+                    {
+                        Name = "Recep",
+                        SurName = "Tayyip",
+                        DateOfBirth = 2001
+                    },
+                    new Author
+                    {
+                        Name = "Emircan",
+                        SurName = "Bayendur",
+                        DateOfBirth = 2001
+                    }
+                    );
+
+                context.Genres.AddRange
+                (
+                    new Genre
+                    {
+                        GenreName = "Personel Growth"
+                    },
+                    new Genre
+                    {
+                        GenreName = "Science Fiction"
+                    },
+                    new Genre
+                    {
+                        GenreName = "Romance"
+                    }
+                 );
                 context.Books.AddRange
                  (
+
                     new Book
                     {
                         //Id = 1,
@@ -36,21 +81,7 @@ namespace WebApiBookStore.DbOperations
                         PublishDate = new DateTime(2006, 06, 20)
                     }
                  );
-                context.Genres.AddRange
-                    (
-                        new Genre
-                        {
-                            GenreName = "Personel Growth"
-                        },
-                        new Genre
-                        {
-                            GenreName = "Science Fiction"
-                        },
-                        new Genre
-                        {
-                            GenreName = "Romance"
-                        }
-                    );
+
                 context.SaveChanges();
             }
         }

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
 using System.Reflection.Metadata;
@@ -22,7 +23,7 @@ namespace WebApiBookStore.Application.BookOperations.Quaries.GetBookDetails
 
         public BookDetailViewModel Handle()
         {
-            var GetBook = _bookContext.Books.Where(x => x.Id == BookId).SingleOrDefault();
+            var GetBook = _bookContext.Books.Include(x => x.Genre).Where(x => x.Id == BookId).SingleOrDefault();
             if (GetBook is null)
             {
                 throw new InvalidOperationException("Bulunamadı");

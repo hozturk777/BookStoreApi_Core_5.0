@@ -16,14 +16,14 @@ namespace WebApiBookStore.Application.GenreOperations.Quaries.GetGenre
         }
         public List<GenreViewModel> Handle()
         {
-            var genrelist = _context.Genres.Where(x => x.IsActive).OrderBy(x => x.GenreID).ToList();
+            var genrelist = _context.Genres.Where(x => x.IsActive).OrderBy(x => x.GenreID);
             List<GenreViewModel> vm = _mapper.Map<List<GenreViewModel>>(genrelist);
             return vm;
         }
         public class GenreViewModel
         {
-            public int ID { get; set; }
-            public string Name { get; set; }
+            public int GenreID { get; set; }
+            public string GenreName { get; set; }
             
         }
 

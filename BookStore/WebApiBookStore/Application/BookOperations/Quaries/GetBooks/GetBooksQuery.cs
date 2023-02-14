@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +21,7 @@ namespace WebApiBookStore.Application.BookOperations.Quaries.GetBooks
         }
         public List<BookViewModel> Handle()
         {
-            var booklist = _bookContext.Books.OrderBy(x => x.Id).ToList();
+            var booklist = _bookContext.Books.Include(x => x.Genre).OrderBy(x => x.Id).ToList();
             List<BookViewModel> bvm = _mapper.Map<List<BookViewModel>>(booklist);
             //List<BookViewModel> bvm = new List<BookViewModel>();
             //foreach (var book in booklist)

@@ -19,7 +19,7 @@ namespace WebApiBookStore.Application.GenreOperations.Quaries.GetGenreDetails
         }
         public GenreDetailModel Handle()
         {
-            var genredetails = _context.Genres.Where(x => x.IsActive && x.GenreID == ID).SingleOrDefault();
+            var genredetails = _context.Genres.SingleOrDefault(x => x.IsActive && x.GenreID == ID);
 
             if (genredetails is null)
             {
@@ -30,8 +30,8 @@ namespace WebApiBookStore.Application.GenreOperations.Quaries.GetGenreDetails
         }
         public class GenreDetailModel
         {
-            public int ID { get; set; }
-            public string Name { get; set; }
+            public int GenreID { get; set; }
+            public string GenreName { get; set; }
         }
     }
 }
