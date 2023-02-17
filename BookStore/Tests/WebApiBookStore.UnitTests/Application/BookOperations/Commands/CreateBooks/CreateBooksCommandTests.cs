@@ -42,5 +42,30 @@ namespace WebApiBookStore.UnitTests.Application.BookOperations.Commands.CreateBo
                 .Should().Throw<InvalidOperationException>().And.Message.Should().Be("Bu Kitap Zaten Mevcut.");
             
         }
+
+        [Fact]
+        public void WhenValidInputAreGiven_Book_ShouldBeCreated()
+        {
+            //arrange
+            CreateBooksQuery command = new CreateBooksQuery(_context, _mapper);
+            CreateBookModel model = new CreateBookModel() { Title = "Bukre 4", GenreId = 1, PageCount = 430, PublishDate = DateTime.Now.Date.AddYears(-10) };
+            command.Model = model;
+
+            //act
+            FluentActions.Invoking(() => command.Handle()).Invoke();
+
+            //assert
+            var book = _context.Books.SingleOrDefault(x => x.Title == model.Title);
+
+            book.Should().NotBeNull();
+            book.PageCount.Should().Be(model.PageCount);
+            book.PublishDate.Should().Be(model.PublishDate);
+            book.GenreId.Should().Be(model.GenreId);
+
+
+        }
+
+
+
     }
 }
