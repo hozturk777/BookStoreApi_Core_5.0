@@ -9,11 +9,11 @@ namespace WebApiBookStore.Application.GenreOperations.Commands.UpdateGenres
 {
     public class UpdateGenresCommand
     {
-        private readonly BookContext _context;
+        private readonly IBookContext _context;
         public int ID { get; set; }
         public UpdateGenreModel Model { get; set; }
 
-        public UpdateGenresCommand(BookContext context)
+        public UpdateGenresCommand(IBookContext context)
         {
             _context = context;
         }

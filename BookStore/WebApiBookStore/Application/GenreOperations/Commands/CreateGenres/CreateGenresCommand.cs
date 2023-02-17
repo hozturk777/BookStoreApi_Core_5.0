@@ -9,10 +9,10 @@ namespace WebApiBookStore.Application.GenreOperations.Commands.CreateGenres
     public class CreateGenresCommand
     {
         public CreateGenreModel Model { get; set; }
-        private readonly BookContext _context;
+        private readonly IBookContext _context;
         private readonly IMapper _mapper;
 
-        public CreateGenresCommand(BookContext context, IMapper mapper)
+        public CreateGenresCommand(IBookContext context, IMapper mapper)
         {
             
             _context = context;

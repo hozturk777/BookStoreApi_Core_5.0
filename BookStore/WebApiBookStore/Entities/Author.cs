@@ -9,5 +9,7 @@ namespace WebApiBookStore.Entities
         public string Name { get; set; }
         public string SurName { get; set; }
         public int DateOfBirth { get; set; }
+        public int BookID { get; set; }
+        public Book Book { get; set; }
     }
 }

@@ -39,6 +39,7 @@ namespace WebApiBookStore
             });
 
             services.AddDbContext<BookContext>(options => options.UseInMemoryDatabase(databaseName: "BookDB"));
+            services.AddScoped<IBookContext>(provider => provider.GetService<BookContext>());
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
             services.AddSingleton<ILoggerService, ConsoleLogger>();
         }

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,10 +9,10 @@ namespace WebApiBookStore.Application.AuthorOperations.Quaries.GetAuthorDetails
 {
     public class GetAuthorDetailQuery
     {
-        private readonly BookContext _context;
+        private readonly IBookContext _context;
         private readonly IMapper _mapper;
         public int ID { get; set; }
-        public GetAuthorDetailQuery(BookContext context, IMapper mapper)
+        public GetAuthorDetailQuery(IBookContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;
@@ -19,7 +20,7 @@ namespace WebApiBookStore.Application.AuthorOperations.Quaries.GetAuthorDetails
 
         public GetAuthorDetailModel Handle()
         {
-            var author = _context.Authors.Where(x => x.AuthorID == ID).SingleOrDefault();
+            var author = _context.Authors.Include(x => x.Book).Where(x => x.AuthorID == ID).SingleOrDefault();
             if (author is null)
             {
                 throw new InvalidOperationException("Öyle Bir Yazar Yok!");
@@ -34,6 +35,7 @@ namespace WebApiBookStore.Application.AuthorOperations.Quaries.GetAuthorDetails
             public string Name { get; set; }
             public string SurName { get; set; }
             public int DateOfBirth { get; set; }
+            public string Book { get; set; }
         }
     }
 }

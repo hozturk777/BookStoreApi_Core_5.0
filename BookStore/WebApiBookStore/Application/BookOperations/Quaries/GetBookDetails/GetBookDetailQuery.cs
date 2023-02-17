@@ -11,11 +11,11 @@ namespace WebApiBookStore.Application.BookOperations.Quaries.GetBookDetails
 {
     public class GetBookDetailQuery
     {
-        private readonly BookContext _bookContext;
+        private readonly IBookContext _bookContext;
         public int BookId { get; set; }
         private readonly IMapper _mapper;
 
-        public GetBookDetailQuery(BookContext bookContext, IMapper mapper)
+        public GetBookDetailQuery(IBookContext bookContext, IMapper mapper)
         {
             _bookContext = bookContext;
             _mapper = mapper;

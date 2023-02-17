@@ -6,9 +6,9 @@ namespace WebApiBookStore.Application.GenreOperations.Commands.DeleteGenres
 {
     public class DeleteGenresCommand
     {
-        private readonly BookContext _context;
+        private readonly IBookContext _context;
         public int ID { get; set; }
-        public DeleteGenresCommand(BookContext context)
+        public DeleteGenresCommand(IBookContext context)
         {
             _context = context;
         }

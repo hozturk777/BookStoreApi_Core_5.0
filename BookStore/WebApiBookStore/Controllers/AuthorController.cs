@@ -2,10 +2,13 @@
 using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 using WebApiBookStore.Application.AuthorOperations.Commands.CreateAuthors;
+using WebApiBookStore.Application.AuthorOperations.Commands.DeleteAuthors;
+using WebApiBookStore.Application.AuthorOperations.Commands.UpdateAuthors;
 using WebApiBookStore.Application.AuthorOperations.Quaries.GetAuthorDetails;
 using WebApiBookStore.Application.AuthorOperations.Quaries.GetAuthors;
 using WebApiBookStore.DbOperations;
 using static WebApiBookStore.Application.AuthorOperations.Commands.CreateAuthors.CreateAuthorCommand;
+using static WebApiBookStore.Application.AuthorOperations.Commands.UpdateAuthors.UpdateAuthorsCommand;
 using static WebApiBookStore.Application.AuthorOperations.Quaries.GetAuthorDetails.GetAuthorDetailQuery;
 
 namespace WebApiBookStore.Controllers
@@ -14,10 +17,10 @@ namespace WebApiBookStore.Controllers
     [Route("[controller]")]
     public class AuthorController : Controller
     {
-        private readonly BookContext _context;
+        private readonly IBookContext _context;
         private readonly IMapper _mapper;
 
-        public AuthorController(BookContext context, IMapper mapper)
+        public AuthorController(IBookContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;
@@ -43,7 +46,7 @@ namespace WebApiBookStore.Controllers
             GetAuthorDetailValidator validator = new GetAuthorDetailValidator();
             validator.ValidateAndThrow(query);
 
-            result =  query.Handle();
+            result = query.Handle();
 
             return Ok(result);
 
@@ -56,6 +59,35 @@ namespace WebApiBookStore.Controllers
             command.Model = createAuthor;
 
             CreateAuthorValidator validator = new CreateAuthorValidator();
+            validator.ValidateAndThrow(command);
+
+            command.Handle();
+
+            return Ok();
+        }
+
+        [HttpPut("id")]
+        public IActionResult UpdateAuthor(int id,[FromBody] UpdateAuthorsModel model)
+        {
+            UpdateAuthorsCommand command = new UpdateAuthorsCommand(_context);
+            command.ID = id;
+            command.Model = model;
+
+            UpdateAuthorsValidator validator = new UpdateAuthorsValidator();
+            validator.ValidateAndThrow(command);
+
+            command.Handle();
+
+            return Ok();
+        }
+
+        [HttpDelete("id")]
+        public IActionResult DeleteAuthor(int id)
+        {
+            DeleteAuthorsCommand command = new DeleteAuthorsCommand(_context);
+            command.ID = id;
+
+            DeleteAuthorValidator validator = new DeleteAuthorValidator();
             validator.ValidateAndThrow(command);
 
             command.Handle();

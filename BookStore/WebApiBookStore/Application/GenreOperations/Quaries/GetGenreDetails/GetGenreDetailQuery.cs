@@ -8,11 +8,11 @@ namespace WebApiBookStore.Application.GenreOperations.Quaries.GetGenreDetails
 {
     public class GetGenreDetailQuery
     {
-        private BookContext _context;
+        private IBookContext _context;
         private IMapper _mapper;
         public int ID { get; set; }
 
-        public GetGenreDetailQuery(BookContext context, IMapper mapper)
+        public GetGenreDetailQuery(IBookContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;

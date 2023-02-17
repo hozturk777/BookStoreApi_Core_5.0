@@ -11,17 +11,17 @@ namespace WebApiBookStore.Application.BookOperations.Quaries.GetBooks
 {
     public class GetBooksQuery
     {
-        private readonly BookContext _bookContext;
+        private readonly IBookContext _bookContext;
         private readonly IMapper _mapper;
 
-        public GetBooksQuery(BookContext bookContext, IMapper mapper)
+        public GetBooksQuery(IBookContext bookContext, IMapper mapper)
         {
             _bookContext = bookContext;
             _mapper = mapper;
         }
         public List<BookViewModel> Handle()
         {
-            var booklist = _bookContext.Books.Include(x => x.Genre).OrderBy(x => x.Id).ToList();
+            var booklist = _bookContext.Books.Include(x => x.Author).Include(x => x.Genre).OrderBy(x => x.Id).ToList();
             List<BookViewModel> bvm = _mapper.Map<List<BookViewModel>>(booklist);
             //List<BookViewModel> bvm = new List<BookViewModel>();
             //foreach (var book in booklist)
@@ -42,6 +42,7 @@ namespace WebApiBookStore.Application.BookOperations.Quaries.GetBooks
             public string Title { get; set; }
             public int PageCount { get; set; }
             public string PublishDate { get; set; }
+            public string Author { get; set; }
             public string Genre { get; set; }
         }
     }

@@ -10,10 +10,10 @@ namespace WebApiBookStore.Application.BookOperations.Commands.UpdateBooks
 {
     public class UpdateBooksQuery
     {
-        private readonly BookContext _bookContext;
+        private readonly IBookContext _bookContext;
         public int BookId { get; set; }
         public UpdateBookViewModel Model { get; set; }
-        public UpdateBooksQuery(BookContext bookContext)
+        public UpdateBooksQuery(IBookContext bookContext)
         {
             _bookContext = bookContext;
         }

@@ -46,11 +46,13 @@ C:\Users\Asus\Desktop\HÜSEYİN\BookStore\BookStore\WebApiBookStore\bin\Debug\ne
 C:\Users\Asus\Desktop\HÜSEYİN\BookStore\BookStore\WebApiBookStore\bin\Debug\net5.0\WebApiBookStore.pdb
 C:\Users\Asus\Desktop\HÜSEYİN\BookStore\BookStore\WebApiBookStore\bin\Debug\net5.0\AutoMapper.dll
 C:\Users\Asus\Desktop\HÜSEYİN\BookStore\BookStore\WebApiBookStore\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Asus\Desktop\HÜSEYİN\BookStore\BookStore\WebApiBookStore\bin\Debug\net5.0\FluentValidation.dll
 C:\Users\Asus\Desktop\HÜSEYİN\BookStore\BookStore\WebApiBookStore\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\Asus\Desktop\HÜSEYİN\BookStore\BookStore\WebApiBookStore\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\Asus\Desktop\HÜSEYİN\BookStore\BookStore\WebApiBookStore\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.InMemory.dll
 C:\Users\Asus\Desktop\HÜSEYİN\BookStore\BookStore\WebApiBookStore\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\Asus\Desktop\HÜSEYİN\BookStore\BookStore\WebApiBookStore\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\Asus\Desktop\HÜSEYİN\BookStore\BookStore\WebApiBookStore\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\Asus\Desktop\HÜSEYİN\BookStore\BookStore\WebApiBookStore\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\Asus\Desktop\HÜSEYİN\BookStore\BookStore\WebApiBookStore\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Asus\Desktop\HÜSEYİN\BookStore\BookStore\WebApiBookStore\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -76,5 +78,3 @@ C:\Users\Asus\Desktop\HÜSEYİN\BookStore\BookStore\WebApiBookStore\obj\Debug\ne
 C:\Users\Asus\Desktop\HÜSEYİN\BookStore\BookStore\WebApiBookStore\obj\Debug\net5.0\WebApiBookStore.pdb
 C:\Users\Asus\Desktop\HÜSEYİN\BookStore\BookStore\WebApiBookStore\obj\Debug\net5.0\WebApiBookStore.genruntimeconfig.cache
 C:\Users\Asus\Desktop\HÜSEYİN\BookStore\BookStore\WebApiBookStore\obj\Debug\net5.0\ref\WebApiBookStore.dll
-C:\Users\Asus\Desktop\HÜSEYİN\BookStore\BookStore\WebApiBookStore\bin\Debug\net5.0\FluentValidation.dll
-C:\Users\Asus\Desktop\HÜSEYİN\BookStore\BookStore\WebApiBookStore\bin\Debug\net5.0\Newtonsoft.Json.dll

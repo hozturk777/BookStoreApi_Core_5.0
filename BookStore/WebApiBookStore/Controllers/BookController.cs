@@ -21,10 +21,10 @@ namespace WebApi.AddController
     [Route("[controller]")]
     public class BookController : ControllerBase
     {
-        private readonly BookContext _context;
+        private readonly IBookContext _context;
         private readonly IMapper _mapper;
 
-        public BookController(BookContext context, IMapper mapper)
+        public BookController(IBookContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;
