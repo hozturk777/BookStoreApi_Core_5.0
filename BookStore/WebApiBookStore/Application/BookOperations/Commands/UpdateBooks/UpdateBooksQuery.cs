@@ -22,7 +22,7 @@ namespace WebApiBookStore.Application.BookOperations.Commands.UpdateBooks
             var book = _bookContext.Books.SingleOrDefault(x => x.Id == BookId);
             if (book is null)
             {
-                throw new InvalidOperationException("bu ıd ile bir kitap yok");
+                throw new InvalidOperationException("bu id ile bir kitap yok");
             }
             book.Title = Model.Title != default ? Model.Title : book.Title;
             book.GenreId = Model.GenreId != default ? Model.GenreId : book.GenreId;
