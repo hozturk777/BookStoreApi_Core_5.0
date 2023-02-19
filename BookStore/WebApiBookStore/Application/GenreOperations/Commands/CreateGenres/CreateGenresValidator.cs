@@ -6,7 +6,7 @@ namespace WebApiBookStore.Application.GenreOperations.Commands.CreateGenres
     {
         public CreateGenresValidator()
         {
-            RuleFor(commond => commond.Model.GenreName).NotEmpty();
+            
             RuleFor(commond => commond.Model.GenreName).MinimumLength(2);
         }
     }

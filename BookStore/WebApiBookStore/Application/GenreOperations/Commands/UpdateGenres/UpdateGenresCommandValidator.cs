@@ -6,7 +6,7 @@ namespace WebApiBookStore.Application.GenreOperations.Commands.UpdateGenres
     {
         public UpdateGenresCommandValidator()
         {
-            RuleFor(command => command.Model.GenreName).MinimumLength(2).When(x => x.Model.GenreName.Trim() != string.Empty);
+            RuleFor(command => command.Model.GenreName).MinimumLength(2)/*.When(x => x.Model.GenreName.Trim() != string.Empty)*/;
             
         }
     }

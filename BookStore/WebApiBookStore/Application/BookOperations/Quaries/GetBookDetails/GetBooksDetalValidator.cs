@@ -6,7 +6,7 @@ namespace WebApiBookStore.Application.BookOperations.Quaries.GetBookDetails
     {
         public GetBooksDetalValidator()
         {
-            RuleFor(common => common.BookId).NotEmpty().WithMessage("Öyle Bir Kitap Yok");
+            RuleFor(common => common.BookId).GreaterThan(0);
         }
     }
 }

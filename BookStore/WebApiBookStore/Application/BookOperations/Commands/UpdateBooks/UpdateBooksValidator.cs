@@ -6,7 +6,7 @@ namespace WebApiBookStore.Application.BookOperations.Commands.UpdateBooks
     {
         public UpdateBooksValidator()
         {
-            RuleFor(common => common.Model.Title).NotEmpty().MinimumLength(2);
+            RuleFor(common => common.Model.Title).MinimumLength(2);
             RuleFor(common => common.Model.GenreId).GreaterThan(0);
         }
     }

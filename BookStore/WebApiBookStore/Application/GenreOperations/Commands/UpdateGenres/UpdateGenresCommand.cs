@@ -30,7 +30,7 @@ namespace WebApiBookStore.Application.GenreOperations.Commands.UpdateGenres
                 throw new InvalidOperationException("Aynı isimde kategori var");
             }
 
-            updategenre.GenreName = string.IsNullOrEmpty(Model.GenreName.Trim()) != default ? Model.GenreName : updategenre.GenreName;
+            updategenre.GenreName = Model.GenreName.Trim() != default ? Model.GenreName : updategenre.GenreName;
             updategenre.IsActive = Model.IsActive;
 
             _context.SaveChanges();

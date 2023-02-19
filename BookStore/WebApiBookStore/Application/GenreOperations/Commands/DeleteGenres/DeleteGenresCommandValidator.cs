@@ -6,7 +6,7 @@ namespace WebApiBookStore.Application.GenreOperations.Commands.DeleteGenres
     {
         public DeleteGenresCommandValidator()
         {
-            RuleFor(command => command.ID).NotNull().GreaterThan(0);
+            RuleFor(command => command.ID).GreaterThan(0);
         }
     }
 }

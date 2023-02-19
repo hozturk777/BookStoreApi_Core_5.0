@@ -6,7 +6,7 @@ namespace WebApiBookStore.Application.GenreOperations.Quaries.GetGenreDetails
     {
         public GetGenresDetailValidator()
         {
-            RuleFor(common => common.ID).NotEmpty().WithMessage("Öyle bir kategori yok");
+            RuleFor(common => common.ID).GreaterThan(0);
         }
     }
 }
