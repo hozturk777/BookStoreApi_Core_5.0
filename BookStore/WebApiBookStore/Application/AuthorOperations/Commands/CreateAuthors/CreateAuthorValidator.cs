@@ -6,9 +6,9 @@ namespace WebApiBookStore.Application.AuthorOperations.Commands.CreateAuthors
     {
         public CreateAuthorValidator()
         {
-            RuleFor(command => command.Model.Name).NotEmpty().MinimumLength(2);
-            RuleFor(command => command.Model.SurName).NotEmpty().MinimumLength(2);
-            RuleFor(commond => commond.Model.DateOfBirth).NotEmpty().GreaterThan(0);
+            RuleFor(command => command.Model.Name).MinimumLength(2);
+            RuleFor(command => command.Model.SurName).MinimumLength(2);
+            RuleFor(commond => commond.Model.DateOfBirth).GreaterThan(0);
             
         }
     }

@@ -22,6 +22,7 @@ namespace WebApiBookStore.UnitTests.TestSetup
             Context.Database.EnsureCreated();
             Context.AddBook();
             Context.AddGenre();
+            Context.AddAuthor();
             Context.SaveChanges();
 
             Mapper = new MapperConfiguration(cfg => { cfg.AddProfile<MappingProfile>(); }).CreateMapper();

@@ -1,10 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebApiBookStore.Entities
 {
     public class Author
     {
-        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int AuthorID { get; set; }
         public string Name { get; set; }
         public string SurName { get; set; }

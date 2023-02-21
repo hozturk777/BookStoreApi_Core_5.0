@@ -32,6 +32,7 @@ namespace WebApiBookStore.Application.AuthorOperations.Quaries.GetAuthorDetails
 
         public class GetAuthorDetailModel
         {
+            public int AuthorID { get; set; }
             public string Name { get; set; }
             public string SurName { get; set; }
             public int DateOfBirth { get; set; }

@@ -28,8 +28,8 @@ namespace WebApiBookStore.Application.AuthorOperations.Commands.UpdateAuthors
             {
                 throw new InvalidOperationException("Aynı isimde yazar var");
             }
-            author.Name = Model.Name.Trim() != default ? Model.Name : author.Name;
-            author.SurName = Model.SurName.Trim() != default ? Model.SurName : author.SurName;
+            author.Name = Model.Name.Trim() != default ? Model.Name.Trim() : author.Name;
+            author.SurName = Model.SurName.Trim() != default ? Model.SurName.Trim() : author.SurName;
             author.DateOfBirth = Model.DateOfBirth != default ? Model.DateOfBirth : author.DateOfBirth;
 
             _context.SaveChanges();
