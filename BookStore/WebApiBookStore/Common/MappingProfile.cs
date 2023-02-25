@@ -13,6 +13,7 @@ using static WebApiBookStore.Application.AuthorOperations.Quaries.GetAuthors.Get
 using static WebApiBookStore.Application.AuthorOperations.Quaries.GetAuthorDetails.GetAuthorDetailQuery;
 using static WebApiBookStore.Application.AuthorOperations.Commands.CreateAuthors.CreateAuthorCommand;
 using System.Linq;
+using static WebApiBookStore.Application.UserOperations.Commands.CreateUsers.CreateUsersCommand;
 
 namespace WebApiBookStore.Common
 {
@@ -47,6 +48,10 @@ namespace WebApiBookStore.Common
             CreateMap<Author, GetAuthorDetailModel>()
                 .ForMember(dest => dest.Book, opt => opt.MapFrom(src => src.Book.Title));
             CreateMap<CreateAuthorModel, Author>();
+
+
+            //User
+            CreateMap<CreateUserModel, User>();
 
         }
     }

@@ -125,3 +125,10 @@ C:\Users\Asus\Desktop\HÜSEYİN\BookStore\BookStore\Tests\WebApiBookStore.UnitTe
 C:\Users\Asus\Desktop\HÜSEYİN\BookStore\BookStore\Tests\WebApiBookStore.UnitTests\obj\Debug\net5.0\WebApiBookStore.UnitTests.pdb
 C:\Users\Asus\Desktop\HÜSEYİN\BookStore\BookStore\Tests\WebApiBookStore.UnitTests\obj\Debug\net5.0\WebApiBookStore.UnitTests.genruntimeconfig.cache
 C:\Users\Asus\Desktop\HÜSEYİN\BookStore\BookStore\Tests\WebApiBookStore.UnitTests\obj\Debug\net5.0\ref\WebApiBookStore.UnitTests.dll
+C:\Users\Asus\Desktop\HÜSEYİN\BookStore\BookStore\Tests\WebApiBookStore.UnitTests\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Asus\Desktop\HÜSEYİN\BookStore\BookStore\Tests\WebApiBookStore.UnitTests\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Asus\Desktop\HÜSEYİN\BookStore\BookStore\Tests\WebApiBookStore.UnitTests\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Asus\Desktop\HÜSEYİN\BookStore\BookStore\Tests\WebApiBookStore.UnitTests\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Asus\Desktop\HÜSEYİN\BookStore\BookStore\Tests\WebApiBookStore.UnitTests\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Asus\Desktop\HÜSEYİN\BookStore\BookStore\Tests\WebApiBookStore.UnitTests\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Asus\Desktop\HÜSEYİN\BookStore\BookStore\Tests\WebApiBookStore.UnitTests\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
